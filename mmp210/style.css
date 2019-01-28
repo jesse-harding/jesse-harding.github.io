@@ -4,7 +4,7 @@ body {padding: 0; margin: 0; background: #777777;user-select: none; overflow-x: 
 
 h1 {text-align: center;}
 
-#title { font-family:"Comic Sans MS", cursive, sans-serif;}
+#title { height:2em; font-family:"Comic Sans MS", cursive, sans-serif;}
 
 #title:hover:after{content: " (these are mostly bad fonts)"; font-family: "Papyrus", fantasy;}
 
