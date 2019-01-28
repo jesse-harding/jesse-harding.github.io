@@ -1,7 +1,12 @@
 function setup() {
-  createCanvas(720, 400);
+  //createCanvas(720, 400);
   noStroke();
   rectMode(CENTER);
+    var cnv = createCanvas(200, 200);
+  //var cnv = createCanvas(windowWidth, windowHeight);
+  cnv.style('display', 'block');
+  cnv.parent('content');
+  cnv.position(100,100);
 }
 
 function draw() {
