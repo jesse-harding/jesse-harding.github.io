@@ -6,7 +6,7 @@ h1 {text-align: center;}
 
 #title { font-family:"Comic Sans MS", cursive, sans-serif;}
 
-#title:hover:after{content: " (these are mostly bad fonts)"; font-family: Papyrus, fantasy;}
+#title:hover:after{content: " (these are mostly bad fonts)"; font-family: "Papyrus", fantasy;}
 
 a {font-family:"Helvetica"; text-decoration:none; color:#000000;}
 
