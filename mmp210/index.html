@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-    <title>MMP210</title>
+    <title>p5.js example</title>
     <link rel="stylesheet" type="text/css" href="style.css">
       
     <script src="p5/p5.min.js"></script>
@@ -29,7 +29,19 @@
       </div>
       <div id="content">
       </div>
-      <img id="potato" src="potato.png">
-
+      <img onmousemove="bgRandom()" onmouseout="bgNormal()" onclick="boop()" id="potato" src="potato.png">
+      <script>
+      function bgRandom(){
+          console.log("woof!");
+//          document.body.style.backgroundColor="red";
+          document.body.style.backgroundColor="hsl(" + Math.floor(Math.random()*256) + ", 100%, 50%)";
+      }
+      function bgNormal(){
+          document.body.style.backgroundColor="#777777";
+      }
+      function boop(){
+          console.log("boop");
+      }
+      </script>
   </body>
 </html>
