@@ -2,9 +2,9 @@ body {padding: 0; margin: 0; background: #777777;user-select: none; overflow-x: 
 
 #content {position: relative; left:50%; top:20px;}
 
-h1 {text-align: center;}
+h1 {text-align: center; height:1.5em;}
 
-#title { height:2em; font-family:"Comic Sans MS", cursive, sans-serif;}
+#title { font-family:"Comic Sans MS", cursive, sans-serif;}
 
 #title:hover:after{content: " (these are mostly bad fonts)"; font-family: "Papyrus", fantasy;}
 
