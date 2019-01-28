@@ -15,3 +15,5 @@ a:hover {font-size:1.3em;}
 a:visited {}
 
 .third {text-align:center; position:relative; display:inline-block; width:33%; height:1.3em; vertical-align: middle;}
+
+#potato {position:absolute; bottom:0px; left:0px;}
