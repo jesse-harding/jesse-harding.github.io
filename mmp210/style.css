@@ -1,1 +1,17 @@
+body {padding: 0; margin: 0; background: #777777;user-select: none;} 
 
+#content {position: relative; left:50%; top:20px;}
+
+h1 {text-align: center;}
+
+#title { font-family:"Comic Sans MS", cursive, sans-serif;}
+
+#title:hover:after{content: " (this is a bad font)";}
+
+a {font-family:"Helvetica"; text-decoration:none; color:#000000;}
+
+a:hover {font-size:1.3em;}
+
+a:visited {}
+
+.third {text-align:center; position:relative; display:inline-block; width:33%; height:1.3em; vertical-align: middle;}
