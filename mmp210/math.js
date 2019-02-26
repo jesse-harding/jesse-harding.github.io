@@ -34,10 +34,14 @@ function draw() {
         for (let a = 0; a < 2 * PI; a += PI / 100){
             let cx = cos(a) * radius2;
             let sy = sin(a) * radius2;
-                let cx2 = cos(a*10) * radius1;
-                let sy2 = sin(a*10) * radius1;
-                let cx3 = -cos(a*9) * radius3;
-                let sy3 = sin(a*9) * radius3;
+//                let cx2 = cos(a*10) * radius1;
+//                let sy2 = sin(a*10) * radius1;
+//                let cx3 = -cos(a*9) * radius3;
+//                let sy3 = sin(a*9) * radius3;
+                let cx2 = cos(a*mouseX) * radius1;
+                let sy2 = sin(a*mouseX) * radius1;
+                let cx3 = -cos(a*mouseY) * radius3;
+                let sy3 = -sin(a*mouseY) * radius3;
 
             vertex(cx + cx2 + cx3, sy + sy2 + sy3);
         }
