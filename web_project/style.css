@@ -1,0 +1,13 @@
+
+im going to center my header
+
+#img_wrapper{text-align: center;}
+
+.secondary {position:absolute; z-index: 98; top: 0px; left: 0px;}
+
+.top_image {}
+
+img {display:inline-block; width: 300px;}
+
+#rightchoice {position:relative; left:200px;}
+#leftchoice {position:relative; left:0px;}
