@@ -5,7 +5,7 @@
 var x, y, z;
 
 function setup(){
-  createCanvas(windowWidth, windowHeight, WEBGL);
+  var cnv = createCanvas(windowWidth, windowHeight, WEBGL);
 	    cnv.style('display', 'block');
     cnv.parent('content'); //this puts my sketch in a div
 	x = 0;
