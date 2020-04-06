@@ -1,0 +1,31 @@
+#top {
+  font-family: fantasy;
+  position: fixed;
+  left: 100px;
+  top: 100px;
+  color: Aquamarine;
+}
+
+h2 {
+  font-family: monospace;
+}
+
+.attribution{
+  font-size:20%;
+}
+
+.conversation {
+  color: #58017f;
+  text-decoration: underline;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  font-size: 150%;
+}
+a:visited{
+  color: #888888;
+}
