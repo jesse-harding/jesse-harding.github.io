@@ -33,3 +33,7 @@ function draw() {
     background(255,20,199);
   }
 }
+
+function mouseClicked(){
+  setup();
+}
