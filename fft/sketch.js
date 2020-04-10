@@ -36,5 +36,7 @@ function draw() {
 }
 
 function mouseClicked(){
-  setup();
+  mic.start();
+  fft.setInput(mic);
+  console.log("restart");
 }
