@@ -15,6 +15,7 @@ function setup() {
   mic.start();
   fft = new p5.FFT();
   fft.setInput(mic);
+  console.log("start");
 }
 
 function draw() {
@@ -27,7 +28,7 @@ function draw() {
     vertex(i, map(spectrum[i], 0, 255, height, 0));
   }
   endShape();
-  console.log(spectrum[40]);
+//   console.log(spectrum[40]);
   
   if (spectrum[40] > 120 && spectrum[100] < 20){
     background(255,20,199);
