@@ -5,7 +5,11 @@ let ids = [];
 
 let camNum = 0;
 
+let typedChars = "";
+
 function setup() {
+  fill(0);
+  rectMode(CENTER);
   if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
   console.log("enumerateDevices() not supported.");
   return;
@@ -42,18 +46,36 @@ navigator.mediaDevices.enumerateDevices()
 }
 
 function draw() {
+  background(255);
+  fill(0);
+  
+     // text(typedChars,0, 10);
   if (capture[ids.length-1]){
     image(capture[camNum], width/2-capture[camNum].width/2, height/2- capture[camNum].height/2, capture[camNum].width, capture[camNum].height);
   }
+ 
 }
 
 function keyPressed(){
   if (int(key) <= ids.length){
     camNum = key - 1;
   }
-}
+  else if (key != "Backspace"){
+    typedChars = typedChars + key;
+  }
+  else if (typedChars.length > 0){
+    typedChars = typedChars.substr(0, typedChars.length-1);
+  }
+  if (typedChars.length > 0){
+
+    console.log(typedChars);
+  }
+} 
 
 function mousePressed() {
     let fs = fullscreen();
+    if(!fs){
     fullscreen(!fs);
+    }  
 }
+  
