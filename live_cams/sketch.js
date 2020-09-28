@@ -38,24 +38,21 @@ navigator.mediaDevices.enumerateDevices()
     console.log(err.name + ": " + err.message);
   });
 
-  createCanvas(w, h);
+  createCanvas(displayWidth, displayHeight);
 }
 
 function draw() {
   if (capture[ids.length-1]){
-    // for (let i = 0; i < capture.length; i++){
-      // image(capture[i], i*w/ids.length, 0, w/ids.length, h/ids.length);
-    image(capture[camNum], displayWidth/2-capture[camNum].width/2, displayHeight/2-capture[camNum].height/2, width, height);
-    // }
+    image(capture[camNum], width/2-capture[camNum].width/2, height/2- capture[camNum].height/2, capture[camNum].width, capture[camNum].height);
   }
 }
 
 function keyPressed(){
   if (int(key) <= ids.length){
-    camNum = key -1;
+    camNum = key - 1;
   }
 }
-  
+
 function mousePressed() {
     let fs = fullscreen();
     fullscreen(!fs);
