@@ -12,7 +12,7 @@ var w = 640,
 
 let ids = []; //array to hold capture ids
 
-let camNum = 1; //variable to hold number of cameras
+let camNum = 0; //variable to select active camera
 
 let comments = []; //array to hold information on annotations on screen
 
