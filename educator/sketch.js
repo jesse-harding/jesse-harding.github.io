@@ -96,7 +96,7 @@ function keyPressed() {
     }
     
     if (keyCode == 8 && comments[active].text.length > 0){
-        comments[active].text = comments[active].text.substr(0, tcomments[active].text.length-1); //remove chars from comment string when backspace is pressed
+        comments[active].text = comments[active].text.substr(0, comments[active].text.length-1); //remove chars from comment string when backspace is pressed
     }
 
     //clear all comments when esc key is pressed
