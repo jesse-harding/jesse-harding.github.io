@@ -1,0 +1,43 @@
+h1{
+/*    you can use hex codes or named colors*/
+    color:#ab1fd7;
+}
+
+/*we can use ids to style specific html elements*/
+#bf{
+    position: fixed;
+    left:200px;
+    top:300px;
+    width:300px;
+    z-index:99;
+}
+#hh{
+    position: relative;
+    width:100%;
+}
+
+a:link{
+    color:#000000;
+}
+a.test:visited{
+    color:#888888;
+    position:fixed;
+}
+a.second:visited{
+    color:#88aa88;
+}
+
+/*this color is illegible on white background, change this*/
+a.test:hover{
+    color:#ffff00;
+}
+a.second:hover{
+    color:#ff0000;
+}
+
+iframe{
+    width:50%;
+    height:200px;
+    border:0;
+    overflow:hidden;
+}
