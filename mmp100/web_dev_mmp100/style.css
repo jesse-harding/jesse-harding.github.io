@@ -1,0 +1,36 @@
+body{
+  margin: 0;
+}
+
+p {
+  /* color: #0066FF; */
+  font-family: fantasy;
+}
+.citation {
+  background-color: #eeeeee;
+  font-family: sans-serif;
+  font-size: .3em;
+}
+
+#sky{
+  z-index: 1;
+}
+
+#ufo {
+  position:absolute;
+  left:500px;
+  top:200px;
+  height: 100px;
+  z-index:2;
+}
+
+a:active{
+  color:#000;
+}
+a:visited{
+  color:#000;
+}
+a:hover{
+  color:#000;
+  font-family: 'Brush Script MT', cursive;
+}
