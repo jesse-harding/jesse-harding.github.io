@@ -6,37 +6,31 @@
 } */
 
 #frame {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    width: 600px;
     position:absolute;
-    z-index: 99;
+    z-index: 2;
 }
 #stones {
-    display: block;
-    /* margin-left: auto;
-    margin-right: auto; */
-    top:110px;
-    left:100px;
-    width: 40%;
+    top:100px;
+    left:20px;
+    width: 540px;
     position:absolute;
     z-index:1;
 }
 
 #sword{
     position:absolute;
-    left:320px;
-    top:150px;
-    z-index:2;
-    width:5%;
+    left:260px;
+    top:170px;
+    z-index:99;
+    width:50px;
 }
 #crow{
     position:absolute;
-    left:480px;
+    left:420px;
     top:235px;
-    z-index:2;
-    width:2%;
+    z-index:99;
+    width:25px;
 }
 
 p{
