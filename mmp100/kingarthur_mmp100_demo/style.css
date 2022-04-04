@@ -5,6 +5,22 @@
     height:300px;
 } */
 
+#greybox {
+    width:500px;
+    height:200px;
+    background-color:#333;
+    border-style:solid;
+}
+
+.purplebox {  
+        position:relative;
+        top: -100px;  
+        right:-20px;
+        width:100px;
+        height:80px;
+        background-color:#8800FF;
+}
+
 #frame {
     width: 600px;
     position:absolute;
@@ -37,3 +53,38 @@ p{
    position:absolute;
    bottom:20px; 
 }
+
+a.internal:link{
+    text-decoration: none;
+    color:brown; 
+}
+
+a.internal:hover{
+    text-decoration: none;
+    cursor: crosshair;
+}
+
+a.external:link{
+    text-decoration: none;
+}
+
+a.external:link{
+    text-decoration: none;
+    color: black;
+    
+}
+
+@keyframes example {
+    from {background-color: darkgreen;}
+    to {background-color: yellow;}
+  }
+
+  div.animate{
+      width:200px;
+      height:200px;
+      background-color: darkgreen;
+      animation-name: example;
+      animation-duration: 1s;
+      animation-direction:alternate;
+      animation-iteration-count: infinite;
+  }
