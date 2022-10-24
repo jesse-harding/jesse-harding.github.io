@@ -1,0 +1,9 @@
+/* the dot means we're styling a class */
+/* em means relative to default size */
+.citation{
+    font-size: .5em;
+}
+
+#skelly{
+    width:30%;
+}
