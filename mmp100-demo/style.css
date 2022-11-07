@@ -4,6 +4,64 @@
     font-size: .5em;
 }
 
-#skelly{
+.citation_name{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.door{
     width:30%;
+}
+
+.recipe-name{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#hallway{
+    width:30%;
+}
+
+
+a:link{
+    color:black;
+}
+a:visited{
+    color:red;
+}
+a:visited:hover{
+    color:yellow;
+}
+a:hover{
+    color:green; 
+}
+
+#left_link{
+    position:absolute;
+    left:2%;
+    bottom:68%;
+    z-index:99;
+}
+#right_link{
+    position: relative;
+    left :25%;
+
+}
+
+.container{
+    display:grid;
+    grid-template-columns: repeat(5, 3fr);
+    gap: 10px 20px;
+    position:relative;
+    top:200px;
+   
+}
+.content-item{
+    background-color:aqua;
+    justify-content: center;
+    align-items:center;
+    display:flex;
+    flex:1;
+    height:100px;
+}
+.content-image{
+    width:100%;
 }
