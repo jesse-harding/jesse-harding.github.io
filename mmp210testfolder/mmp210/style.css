@@ -1,3 +1,10 @@
 body{
-    background-color: hotpink;
+    background-color: coral;
+    
+}
+img{
+    width:400px;
+}
+span{
+    font-size: .5em;
 }
