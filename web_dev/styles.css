@@ -1,0 +1,47 @@
+body{ 
+    background-color: pink;
+}
+
+body.forest{
+    background-image: url(images/forest.jpg); /* using tag AND class so that we can set a background image just on one page */
+}
+
+p{ /* selector for an element type (all p tags) */
+    font-family: fantasy;
+}
+
+.citation{ /* selector for all elements with class="citation" */
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: .5em;
+    width:90%;
+}
+
+#intro{ /* selector for element with id="intro" */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+img{
+    width:100%; /* image element will take up the full width of it's parent element (our div) */
+}
+
+div{
+    width:45%;
+    display:inline-block; /* this line lets us position div elements */
+    position:relative; /* lets us change element location relative to default position */
+    left:5%; /* will move element 5% of screen width FROM the left side toward the right */
+}
+
+/* we can style invidual instances of class and override other styling */
+/* to comment things in or out, highlight and press command / */
+/* .right{ 
+    left:10%;
+} */
+
+h1.whiteBG{
+    background-color:white;
+    text-align: center; /* center text inside of the element */
+}
+
+#shame{
+    border-radius: 8px;
+}
