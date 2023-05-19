@@ -22,7 +22,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(windowHeight+100, windowHeight);
   rectMode(CENTER);
 
   for (let r = 1; r < table.getRowCount(); r++) {
@@ -48,25 +48,25 @@ function setup() {
     
     if (properties[i].type == "314 Rural vac<10") {
       properties[i].fill = color(255, 0, 0);
-      properties[i].x = map(properties[i].size, 0, vacMaxAcreage, 0, width);
+      properties[i].x = map(properties[i].size, 0, vacMaxAcreage, 0, width+100);
       properties[i].y =
         height - map(properties[i].value, 0, vacMaxValue, 0, height);
     }
     if (properties[i].type == "260 Seasonal res - WTRFNT") {
       properties[i].fill = color(0, 127, 0);
-      properties[i].x = map(properties[i].size, 0, resMaxAcreage, 0, width);
+      properties[i].x = map(properties[i].size, 0, resMaxAcreage, 0, width+100);
       properties[i].y =
         height - map(properties[i].value, 0, resMaxValue, 0, height);
     }
     if (properties[i].type == "260 Seasonal res") {
       properties[i].fill = color(0, 255, 0);
-      properties[i].x = map(properties[i].size, 0, resMaxAcreage, 0, width);
+      properties[i].x = map(properties[i].size, 0, resMaxAcreage, 0, width+100);
       properties[i].y =
         height - map(properties[i].value, 0, resMaxValue, 0, height);
     }
     if (properties[i].type == "323 Vacant rural") {
       properties[i].fill = color(0, 0, 255);
-      properties[i].x = map(properties[i].size, 0, vac2MaxAcreage, 0, width);
+      properties[i].x = map(properties[i].size, 0, vac2MaxAcreage, 0, width+100);
       properties[i].y =
         height - map(properties[i].value, 0, vac2MaxValue, 0, height);
     }
@@ -100,7 +100,7 @@ function draw() {
     fill(0);
     translate(0, -translationY);
     for (let x = 0; x < 10; x++) {
-      text((x * vacMaxAcreage) / 10, (x * width) / 10, height);
+      text((x * vacMaxAcreage) / 10, (x * width+100) / 10, height);
     }
     pop();
     push();
@@ -109,7 +109,7 @@ function draw() {
     for (let y = 1; y < 20; y++) {
       text("$" + (y * vacMaxValue) / 20, 0, height - (y * height) / 20);
     }
-    text("314 Rural vac<10", width - 105, 20);
+    text("314 Rural vac<10", width+100 - 105, 20);
     pop();
 
     push();
@@ -141,7 +141,7 @@ function draw() {
     fill(0);
     translate(0, -translationY);
     for (let x = 0; x < 10; x++) {
-      text((x * resMaxAcreage) / 10, (x * width) / 10, height);
+      text((x * resMaxAcreage) / 10, (x * width+100) / 10, height);
     }
     pop();
     push();
@@ -156,7 +156,7 @@ linearRegression(trend2);
     for (let y = 1; y < 20; y++) {
       text("$" + (y * resMaxValue) / 20, 0, height - (y * height) / 20);
     }
-    text("260 Seasonal res (incl. WTRFNT)", width - 190, 20);
+    text("260 Seasonal res (incl. WTRFNT)", width+100 - 190, 20);
     pop();
 
     for (let i = 0; i < properties.length; i++) {
@@ -186,7 +186,7 @@ linearRegression(trend2);
     fill(0);
     translate(0, -translationY);
     for (let x = 0; x < 10; x++) {
-      text((x * resMaxAcreage) / 10, (x * width) / 10, height);
+      text((x * resMaxAcreage) / 10, (x * width+100) / 10, height);
     }
     pop();
     push();
@@ -201,7 +201,7 @@ linearRegression(trend3);
     for (let y = 1; y < 20; y++) {
       text("$" + (y * resMaxValue) / 20, 0, height - (y * height) / 20);
     }
-    text("260 Seasonal res", width - 105, 20);
+    text("260 Seasonal res", width+100 - 105, 20);
     pop();
 
     for (let i = 0; i < properties.length; i++) {
@@ -224,7 +224,7 @@ linearRegression(trend3);
     fill(0);
     translate(0, -translationY);
     for (let x = 0; x < 10; x++) {
-      text((x * vac2MaxAcreage) / 10, (x * width) / 10, height);
+      text((x * vac2MaxAcreage) / 10, (x * width+100) / 10, height);
     }
     pop();
     push();
@@ -242,7 +242,7 @@ linearRegression(trend4);
     for (let y = 1; y < 20; y++) {
       text("$" + (y * vac2MaxValue) / 20, 0, height - (y * height) / 20);
     }
-    text("323 Vacant rural", width - 105, 20);
+    text("323 Vacant rural", width+100 - 105, 20);
     pop();
 
     for (let i = 0; i < properties.length; i++) {
@@ -259,11 +259,11 @@ linearRegression(trend4);
     
     
     
-    // line(0, mouseY-translationY, width, mouseY-translationY);
+    // line(0, mouseY-translationY, width+100, mouseY-translationY);
   }
   
   stroke(0);
-  line(0, mouseY-translationY, width, mouseY-translationY);
+  line(0, mouseY-translationY, width+100, mouseY-translationY);
   line(mouseX - translationX, 0, mouseX - translationX, height);
 }
 
@@ -330,7 +330,7 @@ class Property {
       
       if(mouseIsPressed){
         this.fill = color(0,0,0);
-        navigator.clipboard.writeText("test");
+        navigator.clipboard.writeText("this.id");
         
       }
     }
@@ -348,8 +348,8 @@ function linearRegression(input){
   
   
   for( let i=0; i<input.length; i++){
-    data[data.length] = createVector(map(input[i].x, 0, width, 0,1), map(input[i].y, 0, height, 1,0))
-    // data[i].x = map(input[i].x, 0, width, 0,1);
+    data[data.length] = createVector(map(input[i].x, 0, width+100, 0,1), map(input[i].y, 0, height, 1,0))
+    // data[i].x = map(input[i].x, 0, width+100, 0,1);
     // data[i].y = map(input[i].y, 0, height, 0,1);
     xsum += data[i].x;
     ysum += data[i].y;
@@ -377,9 +377,9 @@ function linearRegression(input){
   let y2 = m* x2 + b;
   
   
-  let x1a = map(x1, 0, 1,0, width);
+  let x1a = map(x1, 0, 1,0, width+100);
   let y1a = map(y1, 0, 1, height, 0);
-  let x2a = map(x2, 0, 1,0, width);
+  let x2a = map(x2, 0, 1,0, width+100);
   let y2a = map(y2, 0, 1, height, 0);
   
   stroke(255, 0, 255);
