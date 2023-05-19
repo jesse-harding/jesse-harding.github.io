@@ -268,10 +268,17 @@ linearRegression(trend4);
 }
 
 function keyPressed() {
-  if (mode < 3) {
+  if (keyCode == 39){
     mode++;
-  } else {
+  }
+  if (keyCode == 37){
+    mode--;
+  }
+  if (mode > 3) {
     mode = 0;
+  }
+  if (mode < 0){ 
+    mode = 3;
   }
 }
 
