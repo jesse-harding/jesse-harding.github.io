@@ -326,6 +326,8 @@ class Property {
       push();
       fill(0);
       text(this.id, mouseX - translationX + 10, mouseY - translationY - 10);
+      text("value: $" + this.value, width-300, 50);
+      text("acreage: " + this.size, width-300, 70);
       pop();
       
       if(mouseIsPressed){
