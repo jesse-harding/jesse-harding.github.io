@@ -22,7 +22,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowHeight+100, windowHeight);
+  createCanvas(windowHeight+100, windowHeight-20);
   rectMode(CENTER);
 
   for (let r = 1; r < table.getRowCount(); r++) {
