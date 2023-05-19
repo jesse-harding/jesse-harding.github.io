@@ -330,7 +330,7 @@ class Property {
       
       if(mouseIsPressed){
         this.fill = color(0,0,0);
-        navigator.clipboard.writeText("this.id");
+        navigator.clipboard.writeText(this.id);
         
       }
     }
