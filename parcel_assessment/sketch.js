@@ -313,7 +313,7 @@ class Property {
       stroke(0);
       translate(this.x, this.y);
 //       rotate((frameCount * PI) / 100);
-      rotate((PI/8) / 100);
+      rotate(PI/4);
       fill(this.fill);
       rect(0, 0, this.d * 1.5);
       pop();
