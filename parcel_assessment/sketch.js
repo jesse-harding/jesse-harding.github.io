@@ -91,16 +91,25 @@ function setup() {
 }
 
 function draw() {
+   background(255);
   translate(translationX, translationY);
+  push();
+  stroke(0);
+  // line(0,0,width,height);
+  pop();
   noStroke();
-  background(255);
+ 
 
   if (mode == 0) {
     push();
     fill(0);
     translate(0, -translationY);
-    for (let x = 0; x < 10; x++) {
-      text((x * vacMaxAcreage) / 10, (x * width-100) / 10, height);
+    for (let x = 0; x < 11; x++) {
+      text((x * vacMaxAcreage) / 10, (x * (width-100)) / 10 -3, height);
+      if (x != 0){
+        stroke(200);
+        line((x * (width-100)) / 10, 0, (x * (width-100)) / 10, height + translationY);
+      }
     }
     pop();
     push();
@@ -108,6 +117,10 @@ function draw() {
     translate(-50, 0);
     for (let y = 1; y < 20; y++) {
       text("$" + (y * vacMaxValue) / 20, 0, height - (y * height) / 20);
+      push();
+      stroke(200);
+      line(translationX, height - (y * height) / 20, width-translationX, height - (y * height) / 20);
+      pop();
     }
     text("314 Rural vac<10", width-100 - 105, 20);
     pop();
@@ -140,8 +153,12 @@ function draw() {
     push();
     fill(0);
     translate(0, -translationY);
-    for (let x = 0; x < 10; x++) {
-      text((x * resMaxAcreage) / 10, (x * width-100) / 10, height);
+    for (let x = 0; x < resMaxAcreage+1; x++) {
+      text((x * resMaxAcreage) / resMaxAcreage, (x * (width-100)) / resMaxAcreage -3, height);
+      if (x != 0){
+        stroke(200);
+        line((x * (width-100)) / resMaxAcreage, 0, (x * (width-100)) / resMaxAcreage, height + translationY);
+      }
     }
     pop();
     push();
@@ -155,6 +172,10 @@ linearRegression(trend2);
     translate(-50, 0);
     for (let y = 1; y < 20; y++) {
       text("$" + (y * resMaxValue) / 20, 0, height - (y * height) / 20);
+      push();
+      stroke(200);
+      line(translationX, height - (y * height) / 20, width-translationX, height - (y * height) / 20);
+      pop();
     }
     text("260 Seasonal res (incl. WTRFNT)", width-100 - 190, 20);
     pop();
@@ -185,8 +206,12 @@ linearRegression(trend2);
     push();
     fill(0);
     translate(0, -translationY);
-    for (let x = 0; x < 10; x++) {
-      text((x * resMaxAcreage) / 10, (x * width-100) / 10, height);
+    for (let x = 0; x < resMaxAcreage+1; x++) {
+      text((x * resMaxAcreage) / resMaxAcreage, (x * (width-100)) / resMaxAcreage -3, height);
+      if (x != 0){
+        stroke(200);
+        line((x * (width-100)) / resMaxAcreage, 0, (x * (width-100)) / resMaxAcreage, height + translationY);
+      }
     }
     pop();
     push();
@@ -200,6 +225,10 @@ linearRegression(trend3);
     translate(-50, 0);
     for (let y = 1; y < 20; y++) {
       text("$" + (y * resMaxValue) / 20, 0, height - (y * height) / 20);
+            push();
+      stroke(200);
+      line(translationX, height - (y * height) / 20, width-translationX, height - (y * height) / 20);
+      pop();
     }
     text("260 Seasonal res", width-100 - 105, 20);
     pop();
@@ -223,8 +252,12 @@ linearRegression(trend3);
     push();
     fill(0);
     translate(0, -translationY);
-    for (let x = 0; x < 10; x++) {
-      text((x * vac2MaxAcreage) / 10, (x * width-100) / 10, height);
+    for (let x = 0; x < vac2MaxAcreage+1; x+=2) {
+      text((x * vac2MaxAcreage) / vac2MaxAcreage, (x * (width-100)) / vac2MaxAcreage -3, height);
+      if (x != 0){
+        stroke(200);
+        line((x * (width-100)) / vac2MaxAcreage, 0, (x * (width-100)) / vac2MaxAcreage, height + translationY);
+      }
     }
     pop();
     push();
@@ -241,6 +274,10 @@ linearRegression(trend4);
     translate(-50, 0);
     for (let y = 1; y < 20; y++) {
       text("$" + (y * vac2MaxValue) / 20, 0, height - (y * height) / 20);
+            push();
+      stroke(200);
+      line(translationX, height - (y * height) / 20, width-translationX, height - (y * height) / 20);
+      pop();
     }
     text("323 Vacant rural", width-100 - 105, 20);
     pop();
@@ -263,8 +300,10 @@ linearRegression(trend4);
   }
   
   stroke(0);
-  line(0, mouseY-translationY, width-100, mouseY-translationY);
-  line(mouseX - translationX, 0, mouseX - translationX, height);
+  // line(0, mouseY-translationY, width-100, mouseY-translationY);
+  // line(mouseX - translationX, 0, mouseX - translationX, height);
+  line (0, 0, 0, height);
+  line (0, height, width, height)
 }
 
 function keyPressed() {
