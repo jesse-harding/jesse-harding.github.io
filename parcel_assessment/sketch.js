@@ -146,7 +146,7 @@ function draw() {
     }
 
 
-    console.log(map(mouseY-translationY, 0, height, vacMaxValue, 0));
+    console.log(map(Y-translationY, 0, height, vacMaxValue, 0));
   }
 
   if (mode == 1) {
@@ -300,8 +300,8 @@ linearRegression(trend4);
   }
   
   stroke(0);
-  // line(0, mouseY-translationY, width-100, mouseY-translationY);
-  // line(mouseX - translationX, 0, mouseX - translationX, height);
+  line(0, mouseY-translationY, width-100, mouseY-translationY);
+  line(mouseX - translationX, 0, mouseX - translationX, height);
   line (0, 0, 0, height);
   line (0, height, width, height)
 }
