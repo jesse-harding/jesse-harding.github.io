@@ -146,7 +146,7 @@ function draw() {
     }
 
 
-    console.log(map(Y-translationY, 0, height, vacMaxValue, 0));
+//     console.log(map(Y-translationY, 0, height, vacMaxValue, 0));
   }
 
   if (mode == 1) {
