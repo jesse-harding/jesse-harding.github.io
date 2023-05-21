@@ -1,5 +1,5 @@
 let table;
-let mode = 0;
+let mode = 2;
 let translationX = 50;
 let translationY = -10;
 
