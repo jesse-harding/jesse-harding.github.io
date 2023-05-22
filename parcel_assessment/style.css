@@ -1,6 +1,13 @@
-html, body {
+html,
+body {
   margin: 0;
-  padding: 0;
+  padding: 2rem;
+}
+body {
+  text-align: center;
+}
+main {
+  display: inline-block;
 }
 canvas {
   display: block;
