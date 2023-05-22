@@ -53,7 +53,7 @@ function setup() {
         height - map(properties[i].value, 0, vacMaxValue, 0, height);
     }
     if (properties[i].type == "260 Seasonal res - WTRFNT") {
-      properties[i].fill = color(0, 127, 0);
+      properties[i].fill = color(255, 0, 255);
       properties[i].x = map(properties[i].size, 0, resMaxAcreage, 0, width-100);
       properties[i].y =
         height - map(properties[i].value, 0, resMaxValue, 0, height);
