@@ -42,9 +42,9 @@ function setup() {
     // if (properties[i].id == "419.-1-21.13") {
     //   properties[i].value = 30000;
     // }
-      if (properties[i].id == "419.-1-21.3") { //property size wrong in assessement roll
-      properties[i].size = 10.16;
-    }
+//       if (properties[i].id == "419.-1-21.3") { //property size wrong in assessement roll
+//       properties[i].size = 10.16;
+//     }
     
     if (properties[i].type == "314 Rural vac<10") {
       properties[i].fill = color(255, 0, 0);
