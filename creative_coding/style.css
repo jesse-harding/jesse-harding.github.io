@@ -1,0 +1,9 @@
+body{
+    background-color: aquamarine;
+}
+p{
+    font-family: fantasy;
+}
+a:hover{
+    color:brown;
+}
