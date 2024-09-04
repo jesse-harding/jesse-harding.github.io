@@ -1,0 +1,15 @@
+body{
+    background-color:blueviolet;
+    margin:0;
+    padding:0;
+}
+p{
+    font-family: fantasy;
+    font-size:2em;
+}
+a:visited{
+    color:bisque;
+}
+a:hover{
+    font-size:1.5em;
+}
