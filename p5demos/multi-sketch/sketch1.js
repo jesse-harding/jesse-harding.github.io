@@ -5,7 +5,7 @@ let sketch = function(p) {
     var cnv = p.createCanvas(200, 200);
     cnv.parent('sketch1');
     cnv.position(150, 100);
-    getAudioContext().suspend(); //this line may be unnecessary due to library updates
+    p.getAudioContext().suspend(); //this line may be unnecessary due to library updates
 
   };
 
