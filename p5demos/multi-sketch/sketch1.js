@@ -4,6 +4,7 @@ let sketch = function(p) {
     
     var cnv = p.createCanvas(200, 200);
     cnv.parent('sketch1');
+    cnv.position(150, 100);
   };
 
   p.draw = function() {
