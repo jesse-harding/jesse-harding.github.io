@@ -1,9 +1,15 @@
-function setup() {
-  let cnv2 = createCanvas(100, 100);
-  cnv2.parent("container2");
-  cnv2.position(150, 100);
-}
+let sketch2 = function(p) {
 
-function draw() {
-  background(50);
-}
+  p.setup = function() {
+    var cnv = p.createCanvas(200, 200);
+    cnv.parent('sketch2')
+  };
+
+  p.draw = function() {
+    p.background(200);
+    p.fill(0);
+    p.rect(p.width/2-25, p.height/2-25, 50, 50);
+  };
+};
+
+new p5(sketch2);
