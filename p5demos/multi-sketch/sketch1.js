@@ -1,9 +1,16 @@
-function setup() {
-  let cnv1 = createCanvas(100, 100);
-  cnv1.parent("container1");
-  cnv1.position(0, 0);
-}
+let sketch = function(p) {
+  
+  p.setup = function() {
+    
+    var cnv = p.createCanvas(200, 200);
+    cnv.parent('sketch1');
+  };
 
-function draw() {
-  background(220);
-}
+  p.draw = function() {
+    p.background(0);
+    p.fill(200);
+    p.rect(p.width/2-25, p.height/2-25, 50, 50);
+  };
+};
+
+new p5(sketch);
