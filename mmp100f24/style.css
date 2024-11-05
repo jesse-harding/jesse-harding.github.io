@@ -2,3 +2,16 @@ body{
   font-family: fantasy;
   background-color: #FF0000;
 }
+
+.test{
+  text-decoration: underline;
+}
+
+#content{
+  font-size: 2.5em;
+}
+
+img{
+  position: relative;
+  left:200px;
+}
